@@ -36,3 +36,6 @@ Thumbs.db
 # docs / prompts (local reference only)
 *.md
 !README.md
+
+# large media (host remotely or add locally — not in git)
+*.mp4

@@ -18,7 +18,7 @@ export const images = {
   heroAlt: U("1518770660439-4636190af475", 2000),
 
   heroVideo:
-    "https://videos.pexels.com/video-files/36262413/15377744_1920_1080_24fps.mp4",
+    "https://res.cloudinary.com/dijyw23q9/video/upload/v1783327754/compressed_hero_owb3aq.mp4",
 
   // Three-pillar / capabilities
   pillarAi: U("1677442136019-21780ecad995", 1200),

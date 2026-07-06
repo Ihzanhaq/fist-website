@@ -35,10 +35,8 @@ export default function Hero() {
       ref={root}
       className="relative flex min-h-svh items-center overflow-hidden"
     >
-      {/* Background video + legibility scrims.
-          Local /compressed_hero.mp4 is used first (fast); falls back to the
-          remote Pexels source automatically. */}
-      <VideoBackground sources={['/compressed_hero.mp4', images.heroVideo]} poster={images.hero} />
+      {/* Background video + legibility scrims (remote CDN — keeps the repo lean). */}
+      <VideoBackground sources={[images.heroVideo]} poster={images.hero} />
       {/* Content scrim for the white heading. Fades to a FIXED dark color
           (not the theme canvas) so the hero reads identically in light and
           dark mode — no light "smoke" bleeding in at the bottom in light mode. */}
