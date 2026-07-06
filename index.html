@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0a0a0b" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)" />
+
+    <title>FIST Innovations | AI, GIS & ERP Software, Kerala</title>
+    <meta
+      name="description"
+      content="AI automation, geospatial intelligence and cloud-native ERP for banks, governments and enterprises. 140+ projects since 2020. Book a discovery call."
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="FIST Innovations" />
+    <meta property="og:title" content="FIST Innovations | AI, GIS & ERP Software" />
+    <meta
+      property="og:description"
+      content="AI automation, geospatial intelligence and cloud-native ERP for banks, governments and enterprises. 140+ projects since 2020."
+    />
+    <meta property="og:url" content="https://fistinnovations.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/x-icon" href="https://fistinnovations.com/assets/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://fistinnovations.com/assets/images/favicon.ico" />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="preconnect" href="https://fistinnovations.com" crossorigin />
+
+    <!-- No-flash theme bootstrap: default to dark, respect saved preference. -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('fist-theme');
+          var dark = saved ? saved === 'dark' : true;
+          var root = document.documentElement;
+          root.classList.toggle('dark', dark);
+          root.style.colorScheme = dark ? 'dark' : 'light';
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.style.colorScheme = 'dark';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      This site needs JavaScript enabled for full functionality. Email
+      <a href="mailto:info@fistinnovations.com">info@fistinnovations.com</a>.
+    </noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/* Class-based dark mode driven by the `.dark` class on <html>. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+  Tailwind v4 theme. `inline` keeps the generated utilities referencing the
+  runtime CSS variables (--canvas, --ink, ...) so light/dark switching works
+  by toggling the `.dark` class — no rebuild, no flash.
+*/
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+
+  --font-display: "Space Grotesk Variable", "Space Grotesk", ui-sans-serif,
+    system-ui, sans-serif;
+  --font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces Variable", "Fraunces", ui-serif, Georgia, serif;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quint: cubic-bezier(0.83, 0, 0.17, 1);
+
+  --container-prose: 68ch;
+}
+
+/* Default (light) palette. The `.dark` class overrides these. */
+@layer base {
+  :root {
+    color-scheme: light;
+    --canvas: #fafaf7;
+    --surface: #ffffff;
+    --surface-2: #f4f4f1;
+    --ink: #16161a;
+    --muted: #52525b;
+    --faint: #8a8a93;
+    --line: rgba(16, 16, 20, 0.1);
+    --accent: #00c977;
+    --accent-hover: #00a466;
+    --accent-soft: rgba(0, 201, 119, 0.1);
+  }
+
+  .dark {
+    color-scheme: dark;
+    --canvas: #0a0a0b;
+    --surface: #111113;
+    --surface-2: #18181b;
+    --ink: #f4f4f5;
+    --muted: #a1a1aa;
+    --faint: #71717a;
+    --line: rgba(255, 255, 255, 0.1);
+    --accent: #00c977;
+    --accent-hover: #19e08a;
+    --accent-soft: rgba(0, 201, 119, 0.16);
+  }
+}
